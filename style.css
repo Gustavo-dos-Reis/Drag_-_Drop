@@ -1,0 +1,193 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Formulário de Adicionar Tarefa */
+.adicionar-tarefa {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#nova-tarefa {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#adicionar-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#adicionar-btn:hover {
+    background-color: #2ecc71;
+}
+
+/* Filtros */
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filtro-btn {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filtro-btn.ativo {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Lista de Tarefas */
+.lista-tarefas {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.tarefa {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    cursor: grab;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.tarefa:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tarefa.arrastando {
+    opacity: 0.5;
+    background-color: #f8f9fa;
+}
+
+.tarefa.concluida {
+    background-color: #f8f9fa;
+    border-left: 4px solid #27ae60;
+}
+
+.tarefa.concluida .texto-tarefa {
+    text-decoration: line-through;
+    color: #95a5a6;
+}
+
+.texto-tarefa {
+    flex: 1;
+    margin: 0 15px;
+    user-select: none;
+}
+
+.botoes-tarefa {
+    display: flex;
+    gap: 10px;
+}
+
+.botao-tarefa {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #7f8c8d;
+    transition: color 0.3s;
+}
+
+.botao-tarefa:hover {
+    color: #34495e;
+}
+
+.botao-concluir:hover {
+    color: #27ae60;
+}
+
+.botao-excluir:hover {
+    color: #e74c3c;
+}
+
+/* Controles */
+.controles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.controles button {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.controles button:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Efeitos de Drag and Drop */
+.tarefa.alvo-drop {
+    border: 2px dashed #3498db;
+    background-color: #eaf2f8;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .adicionar-tarefa {
+        flex-direction: column;
+    }
+    
+    .controles {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

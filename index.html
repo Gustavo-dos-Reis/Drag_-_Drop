@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas com Drag & Drop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Minhas Tarefas</h1>
+        
+        <div class="adicionar-tarefa">
+            <input type="text" id="nova-tarefa" placeholder="Digite uma nova tarefa...">
+            <button id="adicionar-btn"><i class="fas fa-plus"></i> Adicionar</button>
+        </div>
+        
+        <div class="filtros">
+            <button class="filtro-btn ativo" data-filtro="todas">Todas</button>
+            <button class="filtro-btn" data-filtro="pendentes">Pendentes</button>
+            <button class="filtro-btn" data-filtro="concluidas">Concluídas</button>
+        </div>
+        
+        <ul id="lista-tarefas" class="lista-tarefas">
+            <!-- Tarefas serão adicionadas aqui via JavaScript -->
+        </ul>
+        
+        <div class="controles">
+            <button id="limpar-concluidas">Limpar concluídas</button>
+            <button id="limpar-todas">Limpar todas</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
